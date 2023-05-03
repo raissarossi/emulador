@@ -1,9 +1,10 @@
 import { useState } from "react";
+import Input from "../Gerais/Input";
 
 const Solicitacao = () => {
     const [formData, setFormData] = useState({
         nome: "",
-        EDV: "",
+        user: "",
         justificativa: "",
     });
 
@@ -23,11 +24,13 @@ const Solicitacao = () => {
                     <h1 className="bosch-titleS">Solicitar Acesso:</h1>
                     <div className="bg-bosch-grau2 w-5/6 h-[1px]"></div>
 
-                    <input type="text" placeholder="Nome" className="bosch-input" required value={formData.nome} onChange={(event) => setFormData({ ...formData, nome: event.target.value })} />
+                    <input type="text" placeholder="Nome" className="bosch-input" required value={formData.nome} onChange={(event) => setFormData({ ...formData, nome: event.target.value })} maxLength={50}/>
 
-                    <input type="integer" placeholder="EDV" className="bosch-input" required value={formData.EDV} onChange={(event) => setFormData({ ...formData, EDV: event.target.value })} />
+                    <input type="text" placeholder="Usuário" className="bosch-input" required value={formData.EDV} onChange={(event) => setFormData({ ...formData, EDV: event.target.value })} maxLength={6} />
 
-                    <input type="text" placeholder="Justificativa de acesso" className="bosch-input pb-10" required value={formData.justificativa} onChange={(event) => setFormData({ ...formData, justificativa: event.target.value })} />
+                    <textarea placeholder="aa" rows={5} cols={40} maxLength={150} className="bosch-input" required value={formData.justificativa} onChange={(event) => setFormData({ ...formData, justificativa: event.target.value })} />
+
+                    
 
                 </div>
                 <div className="flex flex-col justify-center w-full items-center">
