@@ -10,9 +10,9 @@ function App() {
     <>
       <Header />
       {/* <Login /> */}
-      <Solicitacao />
+      {/* <Solicitacao /> */}
       {/* <Aprovacao /> */}
-      {/* <Form /> */}
+      <Form />
     </>
   )
 }

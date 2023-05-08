@@ -26,11 +26,31 @@ const Solicitacao = () => {
 
                     <input type="text" placeholder="Nome" className="bosch-input" required value={formData.nome} onChange={(event) => setFormData({ ...formData, nome: event.target.value })} maxLength={50}/>
 
-                    <input type="text" placeholder="Usuário" className="bosch-input" required value={formData.EDV} onChange={(event) => setFormData({ ...formData, EDV: event.target.value })} maxLength={6} />
+                    <input type="text" placeholder="Usuário" className="bosch-input" required value={formData.EDV} onChange={(event) => setFormData({ ...formData, EDV: event.target.value })} maxLength={6}/>
 
                     <textarea placeholder="aa" rows={5} cols={40} maxLength={150} className="bosch-input" required value={formData.justificativa} onChange={(event) => setFormData({ ...formData, justificativa: event.target.value })} />
 
-                    
+                    {/* <Input
+                        tipo={'text'}
+                        texto={'Nome...'}
+                        maxLength={50}
+                        required
+                        valueI={formData.nome}
+                        act={(event) => setFormData({ ...formData, nome: event.target.value })} />
+                    <Input
+                        tipo={'text'}
+                        texto={'Usuário...'}
+                        maxLength={50}
+                        required
+                        valueI={formData.user}
+                        act={(event) => setFormData({ ...formData, user: event.target.value })} />
+                    <Input
+                        tipo={'text'}
+                        texto={'Justificativa...'}
+                        maxLength={50}
+                        required
+                        valueI={formData.justificativa}
+                        act={(event) => setFormData({ ...formData, justificativa: event.target.value })} /> */}
 
                 </div>
                 <div className="flex flex-col justify-center w-full items-center">
