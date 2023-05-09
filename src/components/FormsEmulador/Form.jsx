@@ -50,30 +50,30 @@ function Form() {
 
 
   return (
-    <div className='flex justify-center bg-teal-300 max-h-'>
+    <div className='flex justify-center'>
 
-      <div id="form" className="flex bg-blue-700 flex-col w-9/12 justify-center items-center">
+      <div id="form" className="flex flex-col w-9/12 justify-center items-center">
 
-        <div id="progressbar" className="h-24 w-5/6 bg-orange-500 flex items-center my-10">
+        <div id="progressbar" className="h-3 w-5/6 sm:w-3/6 flex items-center my-10 bg-bosch-grau2 rounded-full">
           <div
             style={{
               width:
                 page === 0 ? "33.3%" : page === 1 ? "66.6%" : "100%",
             }}
-            className="h-3 bg-black rounded-r-full"
+            className="h-3 bg-bosch-blau2 rounded-full"
           ></div>
         </div>
 
-        <div id="form-container" className="bg-amber-400 flex justify-center flex-col items-center bosch-form2">
+        <div id="form-container" className="flex justify-center flex-col items-center bosch-form2">
           <div id="header" className="">
             <h1>{FormTitles[page]}</h1>
           </div>
           <div id="body" className="w-full">
             {PageDisplay()}
           </div>
-          <div id="footer" className="">
+          <div id="footer" className=" flex w-5/6 justify-between">
             <button
-              className="border hover:bg-slate-400 disabled:hidden"
+              className="disabled:bg-transparent disabled:text-transparent bg-bosch-blau2 hover:bg-bosch-blau3 text-white mt-10 py-2 px-5 rounded-md"
               disabled={page === 0}
               onClick={() => {
                 setPage((currPage) => currPage - 1);
@@ -82,7 +82,7 @@ function Form() {
               PREV
             </button>
             <button
-              className="border bg-slate-300 hover:bg-slate-400 disabled:bg-slate-900 "
+              className="bg-bosch-blau2 hover:bg-bosch-blau3 disabled:bg-bosch-grau3 text-white mt-10 py-2 px-5 rounded-md"
               disabled={isNextDisabled}
               onClick={() => {
                 if (page === FormTitles.length - 1) {
