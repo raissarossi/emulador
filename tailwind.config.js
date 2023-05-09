@@ -7,8 +7,9 @@ module.exports = {
     extend: {
       colors:{
         bosch:{
-          grau1: '#D0D4D8',
-          grau2: '#B2B9C0',
+          grau0: '#D0D4D8',
+          grau1: '#B2B9C0',
+          grau2: '#D0D4D8',
           grau3: '#71767C',
           grau4: '#383B3E',
           rot1: '#FF2124',

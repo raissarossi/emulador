@@ -13,11 +13,13 @@
         @apply font-bold text-2xl text-bosch-grau4
     }
     .bosch-input{
-        @apply w-5/6 py-1 px-3 sm:px-5 border-[2px] focus:border-2 border-bosch-grau1 focus:outline-none focus:border-bosch-blau1 rounded-md placeholder:text-bosch-grau1;
-        /* w-full max-w-lg outline-none py-1 pl-5 dark:bg-dark-200 text-dark-200 dark:text-gray-200 rounded-full placeholder:text-gray-400 placeholder:dark:text-gray-600  placeholder:text-xs placeholder:uppercase placeholder:font-bold focus:border-2  focus:border-alura-200 focus:dark:border-alura-100 invalid:focus:border-2 invalid:focus:border-red-600 invalid:focus:dark:border-2 invalid:focus:dark:border-red-600 caret-alura-200 dark:caret-alura-100; */ 
+        @apply w-5/6 py-1 px-3 sm:px-5 border-[2px] focus:border-2 border-bosch-grau1 focus:outline-none focus:border-bosch-blau1 rounded-md placeholder:text-bosch-grau2;
     }
     .bosch-input2{
-       @apply w-full flex flex-col items-center;
+       @apply w-full flex flex-col justify-between items-center;
+    }
+    .bosch-input3{
+       @apply w-11/12 py-1 px-3 sm:px-5 border-[2px] focus:border-2 border-bosch-grau1 focus:outline-none focus:border-bosch-blau1 rounded-md placeholder:text-bosch-grau2;
     }
     .bosch-h1{
        @apply w-5/6 flex;
