@@ -9,10 +9,10 @@ function App() {
   return (
     <>
       <Header />
-      {/* <Login /> */}
-      {/* <Solicitacao /> */}
       {/* <Aprovacao /> */}
       <Form />
+      {/* <Login /> */}
+      {/* <Solicitacao /> */}
     </>
   )
 }

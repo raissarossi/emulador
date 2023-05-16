@@ -1,16 +1,29 @@
 import React from 'react';
+import Input from '../Gerais/Input';
 
 function DetalhesPedido({ formData, setFormData }) {
     return (
         <div id='other-info-container' className='bosch-form-page'>
             <div className='bosch-input2'>
                 <h1 className='bosch-h1'>N° Desenho:</h1>
-                <input type='text' required placeholder='N° desenho...' className='bosch-input' value={formData.numDesenho} onChange={(event) => setFormData({ ...formData, numDesenho: event.target.value })} />
+                <Input
+                    tipo={'num'}
+                    texto={'N° desenho...'}
+                    maxLength={20}
+                    required
+                    valueI={formData.numDesenho}
+                    act={(event) => setFormData({ ...formData, numDesenho: event.target.value })} />
             </div>
 
             <div className='bosch-input2'>
                 <h1 className='bosch-h1'>Grupo:</h1>
-                <input type='text' required placeholder='Grupo...' className='bosch-input' value={formData.grupo} onChange={(event) => setFormData({ ...formData, grupo: event.target.value })} />
+                <Input
+                    tipo={'text'}
+                    texto={'Grupo...'}
+                    maxLength={20}
+                    required
+                    valueI={formData.grupo}
+                    act={(event) => setFormData({ ...formData, grupo: event.target.value })} />
             </div>
 
             <div className='bosch-input2'>
@@ -22,16 +35,21 @@ function DetalhesPedido({ formData, setFormData }) {
             <div className='w-5/6 flex items-center'>
                 <div className='bosch-input2 items-start'>
                     <h1 className='bosch-h1'>Existe Semelhante?</h1>
-                    {/* <input type="checkbox" /> */}
                     <select id="Existe Semelhante" required defaultValue={'0'} className='bosch-input' value={formData.existeSemelhante} onChange={(event) => setFormData({ ...formData, existeSemelhante: event.target.value })}>
-                        <option value='0' selected hidden>Placeholder</option>
+                        <option value='0' selected hidden>Selecione...</option>
                         <option value='1'>Sim</option>
                         <option value='2'>Não</option>
                     </select>
                 </div>
                 <div className='bosch-input2 items-end'>
-                    <h1 className='bosch-h1'>N° da Solicitação Semelhante:</h1>
-                    <input type='text' required placeholder='N° da Solicitação...' className='bosch-input' value={formData.numSemelhante} onChange={(event) => setFormData({ ...formData, numSemelhante: event.target.value })} />
+                    <h1 className='bosch-h1'>N° do Semelhante:</h1>
+                    <Input
+                        tipo={'num'}
+                        texto={'N° da Solicitação...'}
+                        maxLength={20}
+                        required
+                        valueI={formData.numSemelhante}
+                        act={(event) => setFormData({ ...formData, numSemelhante: event.target.value })} />
                 </div>
             </div>
         </div>

@@ -47,7 +47,7 @@ const Input = ({ texto, tipo, obrigatorio, maxLength, act, valueI }) => {
         onChange = {act}
         onInput = {handleInputChange}
         required={obrigatorio}
-        className={`form-control rounded-full m-4 p-[3px] ${inputWidth} items-center justify-center text-center border-2`}
+        className={"bosch-input"}
         placeholder={texto}
         maxLength={maxLength}
       />

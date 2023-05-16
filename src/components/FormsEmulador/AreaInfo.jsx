@@ -1,4 +1,5 @@
 import React from 'react';
+import Input from '../Gerais/Input';
 
 function AreaInfo({ formData, setFormData }) {
     return (
@@ -16,7 +17,13 @@ function AreaInfo({ formData, setFormData }) {
 
             <div className='bosch-input2 '>
                 <h1 className='bosch-h1'>Ramal:</h1>
-                <input type='text' required placeholder='Ramal...' value={formData.ramal} onChange={(event) => setFormData({ ...formData, ramal: event.target.value })} className='bosch-input ' />
+                <Input
+                    tipo={'num'}
+                    texto={'Ramal...'}
+                    maxLength={4}
+                    required
+                    valueI={formData.ramal}
+                    act={(event) => setFormData({ ...formData, ramal: event.target.value })} />
             </div>
 
 
@@ -33,7 +40,13 @@ function AreaInfo({ formData, setFormData }) {
                 </div>
                 <div className='bosch-input2 items-end'>
                     <h1 className='bosch-h1'>N°:</h1>
-                    <input type='text' required placeholder='N°...' value={formData.num} onChange={(event) => setFormData({ ...formData, num: event.target.value })} className='bosch-input3' />
+                    <Input
+                        tipo={'num'}
+                        texto={'N°...'}
+                        maxLength={20}
+                        required
+                        valueI={formData.num}
+                        act={(event) => setFormData({ ...formData, num: event.target.value })} />
                 </div>
             </div>
 
@@ -42,10 +55,10 @@ function AreaInfo({ formData, setFormData }) {
                 <h1 className='bosch-h1'>Tipo Débito</h1>
                 <select id="Tipo Debito" value={formData.tipoDebito} onChange={(event) => setFormData({ ...formData, tipoDebito: event.target.value })} className='bosch-input' >
                     <option value="" disabled selected className=''>Selecione...</option>
-                    <option value='1'>exemplo</option>
-                    <option value='2'>exemplo1111</option>
-                    <option value='3'>exemplo1111</option>
-                    <option value='4'>exemplo1111</option>
+                    <option value='1'>exemplo1111</option>
+                    <option value='2'>exemplo2222</option>
+                    <option value='3'>exemplo3333</option>
+                    <option value='4'>exemplo4444</option>
                 </select>
             </div>
 
