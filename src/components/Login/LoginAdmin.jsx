@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import Botao from "../Gerais/Botao";
 import Input from "../Gerais/Input";
 
-const Login = () => {
+const LoginAdmin = () => {
     const rota = useNavigate();
     const [formData, setFormData] = useState({
         // nome: "",
@@ -24,7 +24,7 @@ const Login = () => {
     return (
         <div className="flex justify-center">
             <div className="bosch-form1">
-                <h1 className="bosch-titleS">Login:</h1>
+                <h1 className="bosch-titleS">Login Admin:</h1>
                 <div className="bg-bosch-grau2 w-5/6 h-[1px]"></div>
 
                 {/* <Input
@@ -45,21 +45,22 @@ const Login = () => {
 
                 <Input
                     tipo={'text'}
-                    texto={'Código de acesso...'}
+                    texto={'Senha...'}
                     maxLength={10}
                     required
-                    valueI={formData.user}
+                    valueI={formData.codigo}
                     act={(event) => setFormData({ ...formData, codigo: event.target.value })} />
 
                 <button className="bosch-button " disabled={isNextDisabled} onClick={() => rota("/aprovacao")}>Entrar</button>
 
                 <div className="flex">
-                    <h2 className="font-semibold text-sm">Não tem acesso?</h2>
-                    <Botao rotaa="/solicitacao" texto="Crie aqui"/>
+                    <h2 className="font-semibold text-sm">Precisa de acesso?</h2>
+                    <Botao rotaa="/criaradmin" texto="Criar Administrador"/>
+                    
                 </div>
             </div>
         </div>
     );
 }
 
-export default Login;
+export default LoginAdmin;

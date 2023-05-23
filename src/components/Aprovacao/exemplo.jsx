@@ -5,11 +5,11 @@ const Exemplo = () => {
     return (
         <tr>
             <td className="px-6 py-4 text-sm font-medium text-gray-800 whitespace-nowrap">
-                Raissa
+                UserExemplo
             </td>
             <td className="px-6 py-4 text-sm text-gray-800 whitespace-nowrap">12345678</td>
             <td className="px-6 py-4 text-sm text-gray-800 whitespace-nowrap">
-                rairai@gmail.com
+                Exemplo@gmail.com
             </td>
             <td className="px-6 py-4 text-sm text-gray-800 whitespace-nowrap">
                 323582

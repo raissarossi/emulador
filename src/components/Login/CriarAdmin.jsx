@@ -1,20 +1,22 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import Botao from "../Gerais/Botao";
 import Input from "../Gerais/Input";
 
-const Solicitacao = () => {
+const CriarAdmin = () => {
     const rota = useNavigate()
+    const [errorMsg, setErrorMsg] = useState("");
     const [formData, setFormData] = useState({
         nome: "",
         user: "",
         email: "",
-        justificativa: "",
+        codigo: "",
+        confirmarCodigo: "",
     });
 
-
     const checkInputs = () => {
-        if (formData.user.length == 6 && formData.justificativa.length > 30 && formData.email.includes("@"&&"bosch")) {
-            return formData.nome && formData.user && formData.email && formData.justificativa
+        if (formData.user.length == 6 && formData.email.includes("@" && "bosch") && (formData.codigo == formData.confirmarCodigo)) {
+            return formData.nome && formData.user && formData.email && formData.codigo
         }
 
     };
@@ -49,19 +51,32 @@ const Solicitacao = () => {
                     required
                     valueI={formData.email}
                     act={(event) => setFormData({ ...formData, email: event.target.value })} />
+                <Input
+                    tipo={'password'}
+                    texto={'Senha...'}
+                    maxLength={100}
+                    required
+                    valueI={formData.codigo}
+                    act={(event) => setFormData({ ...formData, codigo: event.target.value })} />
+                <Input
+                    tipo={'password'}
+                    texto={'Confirmar senha...'}
+                    maxLength={100}
+                    required
+                    valueI={formData.confirmarCodigo}
+                    act={(event) => setFormData({ ...formData, confirmarCodigo: event.target.value })} />
+                {errorMsg && <p style={{ color: "red" }}>{errorMsg}</p>}
 
 
-                <textarea placeholder="Justificativa..." rows={5} cols={40} maxLength={150} className="bosch-input" required value={formData.justificativa} onChange={(event) => setFormData({ ...formData, justificativa: event.target.value })} />
-
-                <button className="bosch-button " disabled={isNextDisabled} onClick={()=>rota("/aguarde")}>Solicitar</button>
+                <button className="bosch-button " disabled={isNextDisabled} onClick={() => rota("/aguarde")}>Solicitar</button>
 
                 <div className="flex">
                     <h2 className="font-semibold text-sm">Já tem acesso?</h2>
-                    <button className="text-bosch-blau2 font-semibold text-sm pl-2 cursor-pointer" onClick={() => rota("/")}>Entrar</button>
+                    <Botao rotaa="/loginadmin" texto="Entrar"/>
                 </div>
             </div>
         </div>
     );
 }
 
-export default Solicitacao;
+export default CriarAdmin;
